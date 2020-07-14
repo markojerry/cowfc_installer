@@ -35,7 +35,7 @@ or
 
 ### Phase 2
 After system reboot : `cd /var/www && ./cowfc.sh`
-e
+
 or
 
 -	`cd /var/www`
