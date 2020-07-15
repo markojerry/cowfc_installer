@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt install git && curl && net-tools && wget
 echo "########## !!!!! WARNING !!!!! ##########"
 echo "Recently, Wiimmfi has undergone some changes which makes it so that their servers are more secure from hackers."
 echo "Having said that, this means that the CoWFC fork will not be getting the security patch, as it is unclear how it is possible. For the time being, you accept that you run your own server with a chance that hackers will be able to execute code over the MKW network."
@@ -69,7 +70,7 @@ mod1="proxy" # This is a proxy mod that is dependent on the other 2
 mod2="proxy_http" # This is related to mod1
 mod3="php7.1"
 UPDATE_FILE="$0.tmp"
-UPDATE_BASE="https://raw.githubusercontent.com/EnergyCube/cowfc_installer/master/cowfc.sh"
+UPDATE_BASE="https://raw.githubusercontent.com/markojerry/cowfc_installer/master/cowfc.sh"
 # Functions
 
 function update {
@@ -420,24 +421,14 @@ chmod 777 /var/www/dwc_network_server_emulator/ -R
 if [ "$1" != "-s" ]; then # If there is no -s argument then run the updater
 	update # This will call our update function
 fi
-#echo "******************************************* WARNING!*******************
-#*****************************************************************************
-#IT HAS BEEN DISCOVERED THAT BUILDS ON THE LATEST UBUNTU UPDATES WILL FAIL!
-#*****************************************************************************
-#"
-#read -p "Press [ENTER] to continue at your own risk, or ctrl+c to abort."
-# First we will check if we are on Ubuntu - this isn't 100% going to work,
-# but if we're running Debian, it should be enough for what we need this check
-# to do.
+
 if [ -f /etc/lsb-release ] ; then
 if grep -q "14.04" /etc/lsb-release || grep -q "16.04" /etc/lsb-release ; then
     CANRUN="TRUE"
 elif [ -f /var/www/.aws_install ] ; then
     CANRUN="TRUE"
 else
-    echo "It looks like you are not running on a supported OS."
-    echo "Please open an issue and request support for this platform."
-    echo "Actually Ubuntu 14.04 and 16.04 are supported."
+    CANRUN="TRUE"
 fi
 fi
 
