@@ -3,35 +3,23 @@ CoWFC Installer
 
 This script installs the CoWFC front-end and back-end from https://github.com/EnergyCube/CoWFC
 
-✅ Support Ubuntu 14.04 & 16.04
+✅ Support Ubuntu 14.04 & 16.04 & 20.04
 
-⚠️ Experimental script for Debian (! Only VM tested !)
-
-🔨 Contributing
--------
-
-Please open pull requests.
-
-🔧 Error reporting
--------
-
-Create a new issue and communicate all informations that you can.
 
 📝 How to use
 -------
 
 ### Phase 1
-`mkdir /var/www ; cd /var/www && wget https://raw.githubusercontent.com/EnergyCube/cowfc_installer/master/cowfc.sh && chmod +x cowfc.sh && ./cowfc.sh`
+`mkdir /var/www ; cd /var/www && wget https://raw.githubusercontent.com/markojerry/cowfc_installer/master/cowfc.sh && chmod +x cowfc.sh && ./cowfc.sh`
 
 or
 
 -	`mkdir /var/www`
 -	`cd /var/www`
--	`wget https://raw.githubusercontent.com/EnergyCube/cowfc_installer/master/cowfc.sh`
+-	`wget https://raw.githubusercontent.com/markojerry/cowfc_installer/master/cowfc.sh`
 -	`chmod +x cowfc.sh`
 -	`./cowfc.sh`
 
-⚠️ (Not recommended) If you want to install the Debian experimental version, replace all cowfc.sh with cowfc-debian.sh
 
 ### Phase 2
 After system reboot : `cd /var/www && ./cowfc.sh`
