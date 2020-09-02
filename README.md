@@ -5,6 +5,8 @@ This script installs the CoWFC front-end and back-end from https://github.com/En
 
 ✅ Support Ubuntu 14.04 & 16.04 & 20.04
 
+Requires these packages to work: curl, git, net-tools
+Make sure to install them before with `sudo apt install curl git net-tools`
 
 📝 How to use
 -------
